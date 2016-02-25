@@ -45,6 +45,11 @@
       Write-Host "Robocopy failed with exit code 8: Several files did not copy."
  }
 
+ if ($lastexitcode -eq 10)
+ {
+      Write-Host " Serious error. Robocopy did not copy any files. This is either a usage error or an error due to insufficient access privileges on the source or destination directories."
+ }
+
 else
 {
       write-host "Robocopy failed with exit code:" $lastexitcode
