@@ -47,7 +47,12 @@
 
  if ($lastexitcode -eq 10)
  {
-      Write-Host " Serious error. Robocopy did not copy any files. This is either a usage error or an error due to insufficient access privileges on the source or destination directories."
+      Write-Host "Serious error. Robocopy did not copy any files. This is either a usage error or an error due to insufficient access privileges on the source or destination directories."
+ }
+
+ if ($lastexitcode -eq 16)
+ {
+      Write-Host "Robocopy did not copy any files.  Check the command line parameters and verify that Robocopy has enough rights to write to the destination folder."
  }
 
 else
