@@ -1,4 +1,4 @@
-﻿ robocopy 
+﻿ robocopy C:\pipefile.txt C:\users\j.lafontaine\documents /mir
 
  if ($lastexitcode -eq 0)
  {
