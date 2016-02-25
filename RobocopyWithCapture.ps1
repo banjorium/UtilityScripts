@@ -1,4 +1,4 @@
-﻿ robocopy C:\users\j.lafontaine\illogic.html C:\users\j.lafontaine\documents
+﻿ robocopy C:\users\j.lafontaine C:\users\j.lafontaine\documents illogic.html
 
  if ($lastexitcode -eq 0)
  {
