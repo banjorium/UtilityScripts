@@ -1,4 +1,4 @@
-﻿ robocopy C:\pipefile.txt C:\users\j.lafontaine\documents /mir
+﻿ robocopy C:\users\j.lafontaine\illogic.html C:\users\j.lafontaine\documents
 
  if ($lastexitcode -eq 0)
  {
@@ -18,6 +18,11 @@
  if ($lastexitcode -eq 3)
  {
       Write-Host "Some files were copied. Additional files were present. No failure was encountered"
+ }
+
+ if ($lastexitcode -eq 4)
+ {
+      Write-Host "Some Mismatched files or directories were detected. Examine the output log. Housekeeping is probably necessary."
  }
 
  if ($lastexitcode -eq 5)
